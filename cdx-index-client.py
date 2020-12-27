@@ -21,8 +21,11 @@ def get_num_pages(api_url, url, page_size=None):
     """ Use the showNumPages query
     to get the number of pages in the result set
     """
-    query = {'url': url,
-             'showNumPages': True}
+    query = {
+        'url': url,
+        'showNumPages': True,
+        'output': 'json',
+    }
 
     if page_size:
         query['pageSize'] = page_size
